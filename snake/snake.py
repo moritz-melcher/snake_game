@@ -15,7 +15,7 @@ window = pygame.display.set_mode((winX, winY))
 pygame.display.set_caption("Pysnake")
 
 font = pygame.font.Font("freesansbold.ttf", 20)
-text = font.render("Move to start", True, (0, 0, 255))
+text = font.render("Move to start", True, (160,32,240))
 textRect = text.get_rect()
 textRect.center = (winX // 2, winY // 3)
 
@@ -35,7 +35,7 @@ def generatePosition(direction, gridX, gridY): # 0 - x, 1 - y
 def mainMenu():
     window.fill((0,0,0))
     window.blit(text, textRect)
-    pygame.draw.rect(window,(255,0,0), (x, y, width, height))
+    pygame.draw.rect(window,(0,255,0), (x, y, width, height))
     pygame.display.update()
     while True:
         for event in pygame.event.get():
@@ -165,9 +165,9 @@ while alive:
 
     #draw snake
 
-    pygame.draw.rect(window, (255,0,0), (x, y, width, height))
+    pygame.draw.rect(window, (0,255,0), (x, y, width, height))
     for each in head.body:
-        pygame.draw.rect(window, (255, 0, 0), (each[0], each[1], width, height))
+        pygame.draw.rect(window, (0, 255, 0), (each[0], each[1], width, height))
     pygame.display.update()
 
 # end game
@@ -178,7 +178,7 @@ window.fill((0, 0, 0))
 window.blit(text, textRect)
 window.blit(text, textRect)
 for each in head.body:
-    pygame.draw.rect(window, (255, 0, 0), (each[0], each[1], width, height))
+    pygame.draw.rect(window, (0, 255, 0), (each[0], each[1], width, height))
 pygame.draw.rect(window, (255, 208, 0), (itemX, itemY, width, height))
 pygame.display.update()
 
