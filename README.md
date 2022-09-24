@@ -1,5 +1,5 @@
 # snake_game
-A python version of the classic 2d game, arcade snake. 
+A python version of the classic 2d game, arcade snake. Built with Pygame.
 
 # How to play 
 
